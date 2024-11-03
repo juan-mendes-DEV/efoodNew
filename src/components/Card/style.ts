@@ -80,8 +80,8 @@ export const ContainerRest = styled.div`
   align-items: center;
   padding: 8px;
   font-size: 14px;
-  margin-top: 80px;
-  margin-right: 32px;
+  margin: 10px;
+  margin-bottom: 22px;
 
   h2 {
     color: white;

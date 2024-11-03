@@ -45,13 +45,9 @@ export const HeroDescription = styled.div`
       color: white;
       z-index: 4;
     }
+    @media (max-width: 740px) {
+      text-align: left;
+      margin: 20px;
+    }
   }
 `
-
-// <section class="hero">
-//   <img src="sua-imagem.jpg" alt="Descrição da imagem">
-//   <div class="hero-content">
-//     <h1>Título do Hero</h1>
-//     <p>Descrição do hero.</p>
-//   </div>
-// </section>

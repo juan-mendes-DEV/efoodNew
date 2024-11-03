@@ -8,7 +8,9 @@ const Hero = () => (
     <Link to={'/'}>
       <ImgLogo src={logo} alt="logo" />
     </Link>
-    <TextHero>Viva experiências gastronômicas no conforto da sua casa</TextHero>
+    <TextHero>
+      Viva experiências gastronômicas <br /> no conforto da sua casa
+    </TextHero>
   </Container>
 )
 

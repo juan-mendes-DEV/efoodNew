@@ -61,7 +61,7 @@ const Pizzas = () => (
   <>
     <HeaderBar />
     <HeroApresentacao />
-    <div className="container">
+    <div className="containerTwo">
       <AddList restAdd={foodPizza} />
     </div>
     <Footer />

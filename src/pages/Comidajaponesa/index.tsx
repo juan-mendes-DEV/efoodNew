@@ -63,7 +63,7 @@ const ComidaJaponesa = () => (
   <>
     <HeaderBar />
     <HeroApresentacao />
-    <div className="container">
+    <div className="containerTwo">
       <AddList restAdd={foodjap} />
     </div>
     <Footer />

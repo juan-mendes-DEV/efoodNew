@@ -26,6 +26,14 @@ export const GlobalCss = createGlobalStyle`
       width: 100%;
       margin: 0 auto;
     }
+    .containerTwo{
+      max-width: 1024px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 70px;
+    }
     .buttonHome{
       width: 82px;
     }
