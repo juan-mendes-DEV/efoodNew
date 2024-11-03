@@ -3,13 +3,18 @@ import fundoHeader from '../../assets/images/fundoHeader.png'
 
 export const Container = styled.header`
   background-image: url(${fundoHeader});
-  height: 186px;
-  font-size: 18px;
-  color: #e66767;
-`
-export const Links = styled.ul`
+  height: 384px;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  padding-top: 60px;
+  text-align: center;
+`
+export const ImgLogo = styled.img`
+  width: 125px;
+  height: 58px;
+`
+export const TextHero = styled.h2`
+  font-size: 36px;
+  line-height: 42px;
+  color: #e66767;
 `

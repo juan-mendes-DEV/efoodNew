@@ -1,13 +1,13 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
-import Categories from './pages/Categories'
-import Product from './pages/Product'
+import ComidaJaponesa from './pages/Comidajaponesa'
+import Pizzas from './pages/Pizzaria'
 
 const Rotas = () => (
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/categories" element={<Categories />} />
-    <Route path="/product/:id" element={<Product />} />
+    <Route path="/ComidaJaponesa" element={<ComidaJaponesa />} />
+    <Route path="/Pizzas" element={<Pizzas />} />
   </Routes>
 )
 

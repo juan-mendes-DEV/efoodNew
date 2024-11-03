@@ -1,53 +1,40 @@
-import { Container, FooterSection, Link, Links, SectionTitle } from './styles'
-
-const currentYear = new Date().getFullYear()
+import { ImgIcon, LiList, Rodape, UlList } from './style'
+import faceLogo from '../../assets/images/icons/face.png'
+import instaLogo from '../../assets/images/icons/insta.png'
+import twitterLogo from '../../assets/images/icons/twitter.png'
+import logo from '../../assets/images/logo.png'
+import { ImgLogo } from '../Hero/style'
+import { Link } from 'react-router-dom'
 
 const Footer = () => (
-  <Container>
-    <div className="container">
-      <FooterSection>
-        <SectionTitle>Categorias</SectionTitle>
-        <Links>
-          <li>
-            <Link> RPG</Link>
-          </li>
-          <li>
-            <Link> Ação</Link>
-          </li>
-          <li>
-            <Link> Aventura</Link>
-          </li>
-          <li>
-            <Link> Esportes</Link>
-          </li>
-          <li>
-            <Link> Simulação</Link>
-          </li>
-          <li>
-            <Link> Estratégia</Link>
-          </li>
-          <li>
-            <Link> FPS</Link>
-          </li>
-        </Links>
-      </FooterSection>
-      <FooterSection>
-        <SectionTitle>Acesso rapido</SectionTitle>
-        <Links>
-          <li>
-            <Link>Novidades</Link>
-          </li>
-          <li>
-            <Link>Promoções</Link>
-          </li>
-          <li>
-            <Link>Em breve</Link>
-          </li>
-        </Links>
-      </FooterSection>
-      <p>{currentYear} - &copy; E-PLAY todos os direitos reservados</p>
-    </div>
-  </Container>
+  <Rodape>
+    <Link to={'/'}>
+      <ImgLogo src={logo} alt="" />
+    </Link>
+    <UlList>
+      <LiList>
+        <a href="#">
+          <ImgIcon src={instaLogo} alt="" />
+        </a>
+      </LiList>
+      <LiList>
+        <a href="#">
+          <ImgIcon src={faceLogo} alt="" />
+        </a>
+      </LiList>
+      <LiList>
+        <a href="#">
+          <ImgIcon src={twitterLogo} alt="" />
+        </a>
+      </LiList>
+    </UlList>
+    <p>
+      A efood é uma plataforma para divulgação de estabelecimentos, a
+      responsabilidade
+      <br /> pela entrega, qualidade dos produtos é toda do estabelecimento
+      contratado.
+    </p>
+  </Rodape>
 )
 
 export default Footer

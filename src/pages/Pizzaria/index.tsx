@@ -1,89 +1,71 @@
-import Hero from '../../components/Hero'
+import HeaderBar from '../../components/Header'
+import HeroApresentacao from '../../components/Apresentacao'
 import Footer from '../../components/Footer'
-import CardList from '../../components/CardList'
-import Restaurante from '../../models/Restaurante'
-import resJapa from '../../assets/images/restauranteJaponeis.png'
-import pizzaria from '../../assets/images/pizzaria.png'
+import CardList, { AddList } from '../../components/CardList'
+import Restaurante, { RestAdd } from '../../models/Restaurante'
 import pizzaria1 from '../../assets/images/pizzria1.jpeg'
 import pizzaria2 from '../../assets/images/pizzaria2.jpg'
 
-const restaurantess: Restaurante[] = [
+const foodPizza: RestAdd[] = [
   {
     id: 1,
-    category: '',
-    title: 'comida japonesa',
+    title: 'Pizzaria',
     description:
       'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
-    infos: ['japa'],
-    image: resJapa,
-    link: '/ComidaJaponesa',
-    nota: 3.5
+    image: pizzaria1,
+    link: ''
   },
   {
     id: 2,
-    category: '',
-    title: 'comida japonesa',
+    title: 'Pizzaria',
     description:
       'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
-    infos: ['japa'],
-    image: resJapa,
-    link: '/ComidaJaponesa',
-    nota: 4.5
+    image: pizzaria2,
+    link: ''
   },
   {
     id: 3,
-    category: '',
-    title: 'comida japonesa',
+    title: 'Pizzaria',
     description:
       'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
-    infos: ['Destaque da semana', 'japa'],
-    image: resJapa,
-    link: '/ComidaJaponesa',
-    nota: 4.2
+    image: pizzaria1,
+    link: ''
   },
   {
     id: 4,
-    category: '',
     title: 'Pizzaria',
     description:
       'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
-    infos: ['Destaque', 'pizza'],
     image: pizzaria2,
-    link: '/Pizzas',
-    nota: 5.5
+    link: ''
   },
   {
     id: 5,
-    category: '',
     title: 'Pizzaria',
     description:
       'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
-    infos: ['pizza'],
     image: pizzaria2,
-    link: '/Pizzas',
-    nota: 2.5
+    link: ''
   },
   {
     id: 6,
-    category: '',
     title: 'Pizzaria',
     description:
       'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
-    infos: ['pizza'],
-    image: pizzaria1,
-    link: '/Pizzas',
-    nota: 5.3
+    image: pizzaria2,
+    link: ''
   }
 ]
 
-const Home = () => (
+const Pizzas = () => (
   <>
-    <Hero />
+    <HeaderBar />
+    <HeroApresentacao />
     <div className="container">
-      <CardList restaurantes={restaurantess} />
+      <AddList restAdd={foodPizza} />
     </div>
     <Footer />
   </>
 )
 
-export default Home
+export default Pizzas
