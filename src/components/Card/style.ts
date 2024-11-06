@@ -74,33 +74,38 @@ export const NameDescription = styled.div`
 export const ContainerRest = styled.div`
   display: flex;
   flex-direction: column;
-  width: 360px;
-  height: 366px;
+  width: 320px;
+  height: 348px;
   background-color: #e66767;
-  align-items: center;
   padding: 8px;
   font-size: 14px;
-  margin: 10px;
-  margin-bottom: 22px;
-
+  margin-bottom: 32px;
   h2 {
     color: white;
-    margin-top: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 18px;
   }
   p {
     color: white;
     line-height: 22px;
-    margin-top: 8px;
+    font-size: 14px;
     margin-bottom: 8px;
   }
   button {
-    background-color: white;
+    background-color: #ffebd9;
     border: none;
     width: 100%;
+    font-size: 14px;
     padding: 8px;
+    margin: auto;
+  }
+  @media (max-width: 999px) {
+    margin: 16px auto;
   }
 `
 export const ImgRest = styled.img`
-  width: 350px;
-  height: 160px;
+  width: 100%;
+  height: 100%;
+  max-height: 167px;
 `

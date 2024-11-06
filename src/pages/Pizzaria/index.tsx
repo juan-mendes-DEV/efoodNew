@@ -5,13 +5,14 @@ import CardList, { AddList } from '../../components/CardList'
 import Restaurante, { RestAdd } from '../../models/Restaurante'
 import pizzaria1 from '../../assets/images/pizzria1.jpeg'
 import pizzaria2 from '../../assets/images/pizzaria2.jpg'
+import { title } from 'process'
 
 const foodPizza: RestAdd[] = [
   {
     id: 1,
     title: 'Pizzaria',
     description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     image: pizzaria1,
     link: ''
   },
@@ -19,7 +20,7 @@ const foodPizza: RestAdd[] = [
     id: 2,
     title: 'Pizzaria',
     description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     image: pizzaria2,
     link: ''
   },
@@ -27,7 +28,7 @@ const foodPizza: RestAdd[] = [
     id: 3,
     title: 'Pizzaria',
     description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     image: pizzaria1,
     link: ''
   },
@@ -35,7 +36,7 @@ const foodPizza: RestAdd[] = [
     id: 4,
     title: 'Pizzaria',
     description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     image: pizzaria2,
     link: ''
   },
@@ -43,7 +44,7 @@ const foodPizza: RestAdd[] = [
     id: 5,
     title: 'Pizzaria',
     description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     image: pizzaria2,
     link: ''
   },
@@ -51,7 +52,7 @@ const foodPizza: RestAdd[] = [
     id: 6,
     title: 'Pizzaria',
     description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
     image: pizzaria2,
     link: ''
   }
@@ -60,7 +61,7 @@ const foodPizza: RestAdd[] = [
 const Pizzas = () => (
   <>
     <HeaderBar />
-    <HeroApresentacao />
+    <HeroApresentacao title="Pizzaria" category="italiana" />
     <div className="containerTwo">
       <AddList restAdd={foodPizza} />
     </div>

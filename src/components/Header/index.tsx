@@ -4,7 +4,7 @@ import { ImgLogo } from '../Hero/style'
 import { Link } from 'react-router-dom'
 const HeaderBar = () => (
   <Container>
-    <nav>
+    <nav className="container">
       <Links>
         <li>
           <a href="#">Restaurantes</a>

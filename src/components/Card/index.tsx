@@ -71,13 +71,11 @@ export const CardRest = ({
 }: PropsCardRest) => (
   <ContainerRest>
     <ImgRest src={image} alt="" />
-    <div>
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <button title={'adicionar no carrinho'}>
-        <Link to={''}>Adicionar No Carrinho</Link>
-      </button>
-    </div>
+    <h2>{title}</h2>
+    <p>{description}</p>
+    <button title={'adicionar no carrinho'}>
+      <Link to={''}>Adicionar No Carrinho</Link>
+    </button>
   </ContainerRest>
 )
 export default CardRestaurante

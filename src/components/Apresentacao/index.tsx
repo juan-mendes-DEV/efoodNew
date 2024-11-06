@@ -1,13 +1,15 @@
 import { HeroDescription, HeroSection } from './style'
-import heroimg from '../../assets/images/comida-japonesa.jpg'
 
-const HeroApresentacao = () => (
+type Props = {
+  category: string
+  title: string
+}
+
+const HeroApresentacao = ({ category, title }: Props) => (
   <HeroSection>
-    <HeroDescription>
-      <div>
-        <h1>Bem-vindo ao nosso Restaurante Japonês</h1>
-        <p>Experimente a autêntica culinária japonesa.</p>
-      </div>
+    <HeroDescription className="container">
+      <h1>{category}</h1>
+      <h2>{title}</h2>
     </HeroDescription>
   </HeroSection>
 )

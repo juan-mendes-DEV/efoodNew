@@ -6,10 +6,11 @@ export const Container = styled.header`
   height: 186px;
   font-size: 18px;
   color: #e66767;
+  width: 100%;
 `
 export const Links = styled.ul`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding-top: 60px;
 `

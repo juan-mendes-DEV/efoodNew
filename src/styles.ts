@@ -28,11 +28,20 @@ export const GlobalCss = createGlobalStyle`
     }
     .containerTwo{
       max-width: 1024px;
-      margin: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 100%;
+      margin: 0 auto;
       margin-top: 70px;
+
+      @media (max-width: 999px) {
+       display: flex;
+       justify-content: center;
+  }
+      @media (max-width: 740px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
     }
     .buttonHome{
       width: 82px;

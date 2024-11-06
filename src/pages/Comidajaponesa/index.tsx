@@ -7,13 +7,14 @@ import resJapa from '../../assets/images/restauranteJaponeis.png'
 import resJapa2 from '../../assets/images/comida-japonesa.jpg'
 import pizzaria1 from '../../assets/images/pizzria1.jpeg'
 import pizzaria2 from '../../assets/images/pizzaria2.jpg'
+import { title } from 'process'
 
 const foodjap: RestAdd[] = [
   {
     id: 1,
     title: 'Restaurante japones',
     description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. ',
     image: resJapa,
     link: ''
   },
@@ -21,7 +22,7 @@ const foodjap: RestAdd[] = [
     id: 2,
     title: 'Restaurante japones',
     description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. ',
     image: resJapa2,
     link: ''
   },
@@ -29,7 +30,7 @@ const foodjap: RestAdd[] = [
     id: 3,
     title: 'Restaurante japones',
     description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. ',
     image: resJapa,
     link: ''
   },
@@ -37,7 +38,7 @@ const foodjap: RestAdd[] = [
     id: 4,
     title: 'Restaurante japones',
     description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. ',
     image: resJapa2,
     link: ''
   },
@@ -45,7 +46,7 @@ const foodjap: RestAdd[] = [
     id: 5,
     title: 'Restaurante japones',
     description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. ',
     image: resJapa2,
     link: ''
   },
@@ -53,7 +54,7 @@ const foodjap: RestAdd[] = [
     id: 6,
     title: 'Restaurante japones',
     description:
-      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida.Experimente o Japão sem sair do lar com nosso delivery!',
+      'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. ',
     image: resJapa2,
     link: ''
   }
@@ -62,7 +63,7 @@ const foodjap: RestAdd[] = [
 const ComidaJaponesa = () => (
   <>
     <HeaderBar />
-    <HeroApresentacao />
+    <HeroApresentacao title="comida japonesa" category="comida japonesa" />
     <div className="containerTwo">
       <AddList restAdd={foodjap} />
     </div>
