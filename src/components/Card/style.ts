@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import restJap from '../../assets/images/restauranteJaponeis.png'
+import Button from '../Button'
 
 export const Card = styled.div`
   width: 470px;
@@ -99,6 +100,7 @@ export const ContainerRest = styled.div`
     font-size: 14px;
     padding: 8px;
     margin: auto;
+    cursor: pointer;
   }
   @media (max-width: 999px) {
     margin: 16px auto;
@@ -108,4 +110,81 @@ export const ImgRest = styled.img`
   width: 100%;
   height: 100%;
   max-height: 167px;
+`
+export const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  &.visivel {
+    display: flex;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.73);
+  }
+`
+export const ModalContent = styled.div`
+  max-width: 1030px;
+  height: 344px;
+  margin-top: 70px;
+  position: relative;
+  z-index: 1;
+  background-color: #e66767;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: start;
+  padding: 32px;
+
+  button {
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+`
+export const ModalBody = styled.div`
+  display: flex;
+  img {
+    width: 280px;
+    height: 280px;
+    margin-right: 24px;
+  }
+`
+export const ModalDescription = styled.div`
+  display: block;
+
+  h1 {
+    font-size: 18px;
+    line-height: 21px;
+    color: white;
+    font-weight: bold;
+  }
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  button {
+    background-color: white;
+    color: #e66767;
+    font-size: 14px;
+    font-weight: 700;
+    width: 218px;
+    height: 24px;
+  }
 `

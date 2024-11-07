@@ -10,9 +10,14 @@ import {
   ImgCard,
   ImgRest,
   Infos,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalDescription,
   NameDescription,
   NameRest
 } from './style'
+import { useState } from 'react'
 
 type Props = {
   title: string
@@ -28,6 +33,12 @@ type PropsCardRest = {
   description: string
   image: string
   link: string
+  price: number
+  pessoasServida: string
+  receita: string
+}
+interface ModalState {
+  isVisible: boolean
 }
 
 const CardRestaurante = ({
@@ -67,15 +78,57 @@ export const CardRest = ({
   description,
   image,
   link,
-  title
-}: PropsCardRest) => (
-  <ContainerRest>
-    <ImgRest src={image} alt="" />
-    <h2>{title}</h2>
-    <p>{description}</p>
-    <button title={'adicionar no carrinho'}>
-      <Link to={''}>Adicionar No Carrinho</Link>
-    </button>
-  </ContainerRest>
-)
+  title,
+  price,
+  pessoasServida,
+  receita
+}: PropsCardRest) => {
+  const [modal, setModal] = useState<ModalState>({
+    isVisible: false
+  })
+  const closeModal = () => {
+    setModal({
+      isVisible: false
+    })
+  }
+  return (
+    <>
+      <ContainerRest>
+        <ImgRest src={image} alt="" />
+        <h2>{title}</h2>
+        <p>{description}</p>
+        <button
+          title={'adicionar no carrinho'}
+          onClick={() => {
+            setModal({
+              isVisible: true
+            })
+          }}
+        >
+          Adicionar No Carrinho
+        </button>
+      </ContainerRest>
+      <Modal className={modal.isVisible ? 'visivel' : ''}>
+        <ModalContent className="container">
+          <button onClick={() => closeModal()}>X</button>
+          <ModalBody>
+            <img src={image} alt={title} />
+            <ModalDescription>
+              <h1>{title}</h1>
+              <p>
+                {receita}
+                <br />
+                <br />
+                {pessoasServida}
+              </p>
+              <button>Adicionar ao carrinho - R$ {price}</button>
+            </ModalDescription>
+          </ModalBody>
+        </ModalContent>
+        <div className="overlay"></div>
+      </Modal>
+    </>
+  )
+}
+
 export default CardRestaurante

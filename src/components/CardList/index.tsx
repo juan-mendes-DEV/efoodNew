@@ -19,6 +19,9 @@ export const AddList = ({ restAdd }: PropsRest) => (
           description={restadd.description}
           image={restadd.image}
           link={restadd.link}
+          price={restadd.price}
+          pessoasServida={restadd.pessoasServida}
+          receita={restadd.receita}
         />
       ))}
     </ListTWO>

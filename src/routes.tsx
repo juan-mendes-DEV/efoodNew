@@ -6,8 +6,8 @@ import Pizzas from './pages/Pizzaria'
 const Rotas = () => (
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/ComidaJaponesa" element={<ComidaJaponesa />} />
-    <Route path="/Pizzas" element={<Pizzas />} />
+    <Route path="/ComidaJaponesa/:id" element={<ComidaJaponesa />} />
+    <Route path="/Pizzas/:id" element={<Pizzas />} />
   </Routes>
 )
 

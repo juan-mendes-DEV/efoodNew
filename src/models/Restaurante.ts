@@ -34,19 +34,31 @@ export class RestAdd {
   link: string
   title: string
   id: number
+  type: string
+  price: number
+  pessoasServida: string
+  receita: string
 
   constructor(
     description: string,
     image: string,
     link: string,
     title: string,
-    id: number
+    id: number,
+    type: string,
+    price: number,
+    pessoasServida: string,
+    receita: string
   ) {
     this.description = description
     this.image = image
     this.link = link
     this.title = title
     this.id = id
+    this.type = type
+    this.price = price
+    this.pessoasServida = pessoasServida
+    this.receita = receita
   }
 }
 
