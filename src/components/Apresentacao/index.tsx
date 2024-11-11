@@ -1,15 +1,15 @@
 import { HeroDescription, HeroSection } from './style'
+import { Restaurante } from '../../pages/Home'
 
 type Props = {
-  category: string
-  title: string
+  restaurante: Restaurante
 }
 
-const HeroApresentacao = ({ category, title }: Props) => (
-  <HeroSection>
+const HeroApresentacao = ({ restaurante }: Props) => (
+  <HeroSection style={{ backgroundImage: `url(${restaurante.capa})` }}>
     <HeroDescription className="container">
-      <h1>{category}</h1>
-      <h2>{title}</h2>
+      <h1>{restaurante.titulo}</h1>
+      <h2>{restaurante.tipo}</h2>
     </HeroDescription>
   </HeroSection>
 )

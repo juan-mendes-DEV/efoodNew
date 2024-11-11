@@ -11,16 +11,39 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 80px;
-
   button {
     background-color: #e66767;
     color: white;
-    width: 50%;
+    width: 30%;
     margin: 10px;
     border: none;
     padding: 8px;
+
+    .link {
+      color: white;
+      font-weight: 700;
+      font-size: 14px;
+    }
   }
 `
+export const Destacado = styled.div`
+  position: absolute;
+  right: 0;
+  display: flex;
+  margin-top: 16px;
+  margin-right: 16px;
+  p {
+    margin-left: 10px;
+    color: white;
+    background-color: #e66767;
+    font-size: 12px;
+    padding: 8px;
+    align-items: center;
+    font-weight: 700;
+  }
+`
+// export const Tipo = styled.p`
+// `
 export const ImgCard = styled.img`
   width: 100%;
   height: 220px;

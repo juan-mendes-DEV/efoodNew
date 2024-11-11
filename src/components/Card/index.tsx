@@ -6,10 +6,10 @@ import {
   Card,
   ContainerRest,
   DescriptionNota,
+  Destacado,
   EstrelaIcon,
   ImgCard,
   ImgRest,
-  Infos,
   Modal,
   ModalBody,
   ModalContent,
@@ -18,71 +18,63 @@ import {
   NameRest
 } from './style'
 import { useState } from 'react'
+import { Cardapio, Restaurante } from '../../pages/Home'
 
-type Props = {
-  title: string
-  category: string
-  description: string
-  infos: string[]
-  image: string
-  link: string
-  nota: number
-}
-type PropsCardRest = {
-  title: string
-  description: string
-  image: string
-  link: string
-  price: number
-  pessoasServida: string
-  receita: string
-}
 interface ModalState {
   isVisible: boolean
 }
-
+const getDescription = (descricao: string) => {
+  if (descricao.length > 150) {
+    return descricao.slice(0, 150) + '...'
+  }
+  return descricao
+}
 const CardRestaurante = ({
-  title,
-  category,
-  description,
-  infos,
-  image,
-  link,
-  nota
-}: Props) => (
-  <Card>
-    <ImgCard src={image} alt={title} />
-    <Infos>
-      {infos.map((info) => (
-        <Tag size="big" key={info}>
-          {info}
-        </Tag>
-      ))}
-    </Infos>
-    <NameRest>
-      <h3>{title}</h3>
-      <DescriptionNota>
-        <p>{nota}</p>
-        <EstrelaIcon src={estrela} alt="" />
-      </DescriptionNota>
-    </NameRest>
-    <NameDescription>
-      <p>{description}</p>
-    </NameDescription>
-    <Button type="link" to={link} title={'Clique e saiba mais'}>
-      Saiba Mais
-    </Button>
-  </Card>
-)
+  avaliacao,
+  descricao,
+  capa,
+  id,
+  titulo,
+  destacado,
+  tipo
+}: Restaurante) => {
+  return (
+    <>
+      <Card>
+        <ImgCard src={capa} alt={titulo} />
+        <Destacado>
+          {destacado && <p>Destaque da Semana</p>}
+          <p>{tipo}</p>
+        </Destacado>
+        <NameRest>
+          <h3>{titulo}</h3>
+          <DescriptionNota>
+            <p>{avaliacao}</p>
+            <EstrelaIcon src={estrela} alt="" />
+          </DescriptionNota>
+        </NameRest>
+        <NameDescription>
+          <p>{getDescription(descricao)}</p>
+        </NameDescription>
+        <button>
+          <Link className="link" to={`/Restaurantes/${id}`}>
+            Saiba Mais
+          </Link>
+        </button>
+      </Card>
+    </>
+  )
+}
+export default CardRestaurante
+
 export const CardRest = ({
-  description,
-  image,
-  link,
-  title,
-  price,
-  pessoasServida,
-  receita
-}: PropsCardRest) => {
+  descricao,
+  id,
+  foto,
+  nome,
+  porcao,
+  preco
+}: Cardapio) => {
   const [modal, setModal] = useState<ModalState>({
     isVisible: false
   })
@@ -94,9 +86,9 @@ export const CardRest = ({
   return (
     <>
       <ContainerRest>
-        <ImgRest src={image} alt="" />
-        <h2>{title}</h2>
-        <p>{description}</p>
+        <ImgRest src={foto} alt="" />
+        <h2>{nome}</h2>
+        <p>{getDescription(descricao)}</p>
         <button
           title={'adicionar no carrinho'}
           onClick={() => {
@@ -112,16 +104,16 @@ export const CardRest = ({
         <ModalContent className="container">
           <button onClick={() => closeModal()}>X</button>
           <ModalBody>
-            <img src={image} alt={title} />
+            <img src={foto} alt={nome} />
             <ModalDescription>
-              <h1>{title}</h1>
+              <h1>{nome}</h1>
               <p>
-                {receita}
+                {descricao}
                 <br />
                 <br />
-                {pessoasServida}
+                {porcao}
               </p>
-              <button>Adicionar ao carrinho - R$ {price}</button>
+              <button>Adicionar ao carrinho - R$ {preco}</button>
             </ModalDescription>
           </ModalBody>
         </ModalContent>
@@ -130,5 +122,3 @@ export const CardRest = ({
     </>
   )
 }
-
-export default CardRestaurante

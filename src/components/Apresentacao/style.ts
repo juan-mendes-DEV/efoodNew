@@ -4,7 +4,6 @@ import ImgHero from '../../assets/images/comida-japonesa.jpg'
 export const HeroSection = styled.section`
   position: relative;
   height: 350px; /* Ajuste a altura conforme necessário */
-  background-image: url(${ImgHero});
   background-size: cover;
   background-position: center;
   z-index: 3;
