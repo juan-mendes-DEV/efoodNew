@@ -19,6 +19,7 @@ import {
 } from './style'
 import { useState } from 'react'
 import { Cardapio, Restaurante } from '../../pages/Home'
+import { useGetFeatureEfoodQuery } from '../../services/api'
 
 interface ModalState {
   isVisible: boolean

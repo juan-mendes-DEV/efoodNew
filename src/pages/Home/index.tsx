@@ -3,6 +3,10 @@ import Footer from '../../components/Footer'
 import CardList from '../../components/CardList'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import {
+  useGetFeatureEfoodQuery,
+  useGetHomePageQuery
+} from '../../services/api'
 
 export type Restaurante = {
   id: number
@@ -24,19 +28,12 @@ export type Cardapio = {
 }
 
 const Home = () => {
-  const [restaurantes, setRestaurantes] = useState<Restaurante[]>([])
-
-  useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((res) => res.json())
-      .then((res) => setRestaurantes(res))
-  }, [])
-
+  const { data: catalogoServico = [] } = useGetHomePageQuery()
   return (
     <>
       <Hero />
       <div className="container">
-        <CardList restaurantes={restaurantes} />
+        <CardList restaurantes={catalogoServico} />
       </div>
       <Footer />
     </>

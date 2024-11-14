@@ -5,23 +5,12 @@ import { AddList } from '../../components/CardList'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { Cardapio, Restaurante } from '../Home'
+import { useGetFeatureEfoodQuery } from '../../services/api'
 
 const Restaurantes = () => {
   const { id } = useParams()
-  const [restaurante, setRestaurante] = useState<Restaurante | null>(null)
+  const { data: restaurante } = useGetFeatureEfoodQuery(id!)
 
-  useEffect(() => {
-    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
-      .then((res) => res.json())
-      .then((res) => {
-        // Verifica se a resposta é uma array, se não, converte para uma array com um único elemento
-        if (!Array.isArray(res)) {
-          res = [res]
-        }
-
-        setRestaurante(res[0]) // Define o primeiro restaurante retornado pela API
-      })
-  }, [id])
   if (!restaurante) {
     return <h3>Carregando...</h3>
   }
