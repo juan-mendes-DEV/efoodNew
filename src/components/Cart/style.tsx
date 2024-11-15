@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
-import { ButtonContainer } from '../Button/style'
 
 export const Overlay = styled.div`
   position: absolute;
@@ -17,9 +15,13 @@ export const CartContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: flex-end;
   z-index: 7;
+
+  &.is-open {
+    display: flex;
+  }
 `
 export const Sidebar = styled.aside`
   background-color: #e66767;
@@ -58,7 +60,7 @@ export const Quantity = styled.p`
   margin-top: 32px;
   margin-bottom: 16px;
 `
-export const CartItem = styled.li`
+export const CartItems = styled.li`
   display: flex;
   background-color: #ffebd9;
   position: relative;

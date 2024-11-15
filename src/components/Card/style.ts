@@ -148,6 +148,7 @@ export const Modal = styled.div`
   &.visivel {
     display: flex;
   }
+
   .overlay {
     position: absolute;
     top: 0;
@@ -169,6 +170,13 @@ export const ModalContent = styled.div`
   align-items: start;
   padding: 32px;
 
+  @media (max-width: 740px) {
+    height: 600px;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: end;
+  }
+
   button {
     border: none;
     background-color: transparent;
@@ -179,6 +187,17 @@ export const ModalContent = styled.div`
 `
 export const ModalBody = styled.div`
   display: flex;
+
+  @media (max-width: 740px) {
+    flex-direction: column;
+
+    img {
+      align-items: center;
+      width: 200px;
+      height: 200px;
+      margin-right: 0;
+    }
+  }
   img {
     width: 280px;
     height: 280px;
@@ -209,5 +228,27 @@ export const ModalDescription = styled.div`
     font-weight: 700;
     width: 218px;
     height: 24px;
+  }
+
+  @media (max-width: 740px) {
+    h1 {
+      font-size: 18px;
+      line-height: 10px;
+      padding: 5px;
+      margin-top: 10px;
+    }
+    p {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    button {
+      font-size: 14px;
+      font-weight: 700;
+      width: 218px;
+      height: 24px;
+    }
   }
 `

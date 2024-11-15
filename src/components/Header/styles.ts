@@ -14,3 +14,10 @@ export const Links = styled.ul`
   align-items: center;
   padding-top: 60px;
 `
+export const CartButton = styled.a`
+  display: flex;
+
+  img {
+    margin-left: 16px;
+  }
+`

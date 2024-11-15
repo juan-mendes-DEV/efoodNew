@@ -20,6 +20,8 @@ import {
 import { useState } from 'react'
 import { Cardapio, Restaurante } from '../../pages/Home'
 import { useGetFeatureEfoodQuery } from '../../services/api'
+import { useDispatch } from 'react-redux'
+import { CartItem, add, open } from '../../store/redux/cart'
 
 interface ModalState {
   isVisible: boolean
@@ -76,6 +78,20 @@ export const CardRest = ({
   porcao,
   preco
 }: Cardapio) => {
+  const dispatch = useDispatch()
+
+  const addTocart = () => {
+    const itemToAdd: CartItem = {
+      id: id, // Certifique-se de que 'id' está definido corretamente
+      nome: nome, // Substitua com o nome do item
+      preco: preco,
+      foto: foto,
+      descricao: descricao,
+      porcao: porcao
+    }
+    dispatch(add(itemToAdd))
+    dispatch(open())
+  }
   const [modal, setModal] = useState<ModalState>({
     isVisible: false
   })
@@ -114,7 +130,9 @@ export const CardRest = ({
                 <br />
                 {porcao}
               </p>
-              <button>Adicionar ao carrinho - R$ {preco}</button>
+              <button onClick={addTocart}>
+                Adicionar ao carrinho - R$ {preco}
+              </button>
             </ModalDescription>
           </ModalBody>
         </ModalContent>
