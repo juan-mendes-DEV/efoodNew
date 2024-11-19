@@ -12,6 +12,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 import { close, remove, CartItem } from '../../store/redux/cart'
 
+export const parseToBrl = (amount = 0) => {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(amount)
+}
+
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
 
@@ -44,7 +51,7 @@ const Cart = () => {
               <img src={item.foto} alt="" />
               <div>
                 <h3>{item.nome}</h3>
-                <span>R$ {item.preco}</span>
+                <span>R$ {parseToBrl(item.preco)}</span>
               </div>
               <Fechar>
                 <img
@@ -59,7 +66,7 @@ const Cart = () => {
         </ul>
         <ValorTotal>
           <p>Valor Total</p>
-          <p>{getTotalPrice(items).toFixed(2)}</p>
+          <p>{parseToBrl(getTotalPrice(items))}</p>
         </ValorTotal>
         <button
           className="btn"

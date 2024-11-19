@@ -222,7 +222,7 @@ export const ModalDescription = styled.div`
     line-height: 22px;
   }
   button {
-    background-color: white;
+    background-color: #ffebd9;
     color: #e66767;
     font-size: 14px;
     font-weight: 700;

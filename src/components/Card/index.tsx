@@ -22,6 +22,7 @@ import { Cardapio, Restaurante } from '../../pages/Home'
 import { useGetFeatureEfoodQuery } from '../../services/api'
 import { useDispatch } from 'react-redux'
 import { CartItem, add, open } from '../../store/redux/cart'
+import { parseToBrl } from '../Cart'
 
 interface ModalState {
   isVisible: boolean
@@ -131,7 +132,7 @@ export const CardRest = ({
                 {porcao}
               </p>
               <button onClick={addTocart}>
-                Adicionar ao carrinho - R$ {preco}
+                Adicionar ao carrinho - {parseToBrl(preco)}
               </button>
             </ModalDescription>
           </ModalBody>
