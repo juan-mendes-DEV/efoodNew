@@ -38,6 +38,7 @@ export const Sidebar = styled.aside`
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
+    background-color: #ffebd9;
   }
 `
 export const Prices = styled.p`
