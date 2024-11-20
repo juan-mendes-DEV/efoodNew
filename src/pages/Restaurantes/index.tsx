@@ -1,10 +1,8 @@
 import HeaderBar from '../../components/Header'
 import HeroApresentacao from '../../components/Apresentacao'
 import Footer from '../../components/Footer'
-import { AddList } from '../../components/CardList'
+import { AddList } from '../../components/RestaurantMenuList'
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import { Cardapio, Restaurante } from '../Home'
 import { useGetFeatureEfoodQuery } from '../../services/api'
 
 const Restaurantes = () => {

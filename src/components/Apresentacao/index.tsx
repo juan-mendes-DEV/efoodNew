@@ -1,5 +1,4 @@
 import { HeroDescription, HeroSection } from './style'
-import { Restaurante } from '../../pages/Home'
 
 type Props = {
   restaurante: Restaurante

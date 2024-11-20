@@ -2,7 +2,6 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { GlobalCss } from './styles'
 import Rotas from './routes'
-import HeaderBar from './components/Header'
 import { store } from './store'
 import Cart from './components/Cart'
 

@@ -1,4 +1,3 @@
-import Button from '../Button'
 import {
   CartContainer,
   CartItems,
@@ -11,13 +10,7 @@ import fechar from '../../assets/images/fechar.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 import { close, remove, CartItem } from '../../store/redux/cart'
-
-export const parseToBrl = (amount = 0) => {
-  return new Intl.NumberFormat('pt-BR', {
-    style: 'currency',
-    currency: 'BRL'
-  }).format(amount)
-}
+import { parseToBrl } from '../../utils'
 
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart)

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import ImgHero from '../../assets/images/comida-japonesa.jpg'
 
 export const HeroSection = styled.section`
   position: relative;
