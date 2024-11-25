@@ -43,6 +43,4 @@ export const GlobalCss = createGlobalStyle`
       width: 82px;
     }
 `
-// export const Container = styled.div`
 
-// `
