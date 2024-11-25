@@ -7,7 +7,7 @@ import { useGetFeatureEfoodQuery } from '../../services/api'
 
 const Restaurantes = () => {
   const { id } = useParams()
-  const { data: restaurante } = useGetFeatureEfoodQuery(id!)
+  const { data: restaurante } = useGetFeatureEfoodQuery(id ?? '')
 
   if (!restaurante) {
     return <h3>Carregando...</h3>

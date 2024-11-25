@@ -109,3 +109,121 @@ export const ValorTotal = styled.div`
     color: #ffebd9;
   }
 `
+export const TabButton = styled.button`
+  border: none;
+  margin-bottom: 8px;
+  height: 24px;
+  background-color: #ffebd9;
+  font-weight: 700;
+  font-size: 14px;
+`
+
+export const Container = styled.div`
+  display: none;
+  &.is-open {
+    display: flex;
+  }
+`
+export const FormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+`
+export const InputGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 8px;
+    color: #ffebd9;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  input {
+    width: 344px;
+    height: 32px;
+    border: none;
+    margin-bottom: 8px;
+    padding-left: 4px;
+  }
+  small {
+    color: red;
+    margin-top: -2px;
+    margin-bottom: 2px;
+  }
+`
+export const InputGroupTwo = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  justify-content: space-around;
+  div {
+    input {
+      width: 155px;
+      height: 32px;
+      border: none;
+      padding-left: 4px;
+    }
+    label {
+      margin-bottom: 8px;
+      color: #ffebd9;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .Input {
+      margin-right: 34px;
+    }
+    small {
+      color: red;
+      margin-top: -2px;
+      margin-bottom: 2px;
+    }
+  }
+`
+export const GroupButtons = styled.div`
+  margin-top: 16px;
+`
+export const InputGroupThre = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  justify-content: space-around;
+  div {
+    label {
+      color: #ffebd9;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    input {
+      height: 32px;
+      border: none;
+      margin-top: 8px;
+    }
+    .InputOne {
+      width: 228px;
+    }
+    .InputTwo {
+      width: 87px;
+    }
+    small {
+      color: red;
+      margin-top: -2px;
+      margin-bottom: 2px;
+    }
+  }
+`
+export const TextConcluido = styled.div`
+  height: 286px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 24px;
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffebd9;
+    line-height: 22px;
+  }
+`

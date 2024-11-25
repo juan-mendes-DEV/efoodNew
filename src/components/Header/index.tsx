@@ -27,7 +27,17 @@ const HeaderBar = () => {
             </Link>
           </li>
           <li>
-            <CartButton onClick={openCart}>
+            <CartButton
+              onClick={() => {
+                if (items.length >= 1) {
+                  openCart()
+                } else {
+                  alert(
+                    'Não a items no carrinho, primeiro adicione um item para continuar com a compra'
+                  )
+                }
+              }}
+            >
               {items.length} - Produto(s) no carrinho
             </CartButton>
           </li>
