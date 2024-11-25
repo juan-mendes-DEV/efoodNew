@@ -18,13 +18,16 @@ const HeaderBar = () => {
     <Container>
       <nav className="container">
         <Links>
-          <li>
+          <li className="is-none">
             <Link to={'/'}>Restaurantes</Link>
           </li>
           <li>
             <Link to={'/'}>
               <ImgLogo src={logo} alt="" />
             </Link>
+          </li>
+          <li className="is-none-two">
+            <Link to={'/'}>Restaurantes</Link>
           </li>
           <li>
             <CartButton

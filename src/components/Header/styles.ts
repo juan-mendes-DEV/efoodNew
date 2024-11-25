@@ -13,6 +13,23 @@ export const Links = styled.ul`
   justify-content: space-between;
   align-items: center;
   padding-top: 60px;
+  @media (max-width: 500px) {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .is-none {
+      display: none;
+    }
+    .is-none-two {
+      margin-top: 10px;
+    }
+  }
+  @media (min-width: 501px) {
+    .is-none-two {
+      display: none;
+    }
+  }
 `
 export const CartButton = styled.a`
   display: flex;
@@ -20,5 +37,11 @@ export const CartButton = styled.a`
 
   img {
     margin-left: 16px;
+  }
+  @media (max-width: 500px) {
+    margin-top: 20px;
+    img {
+      margin-left: 0;
+    }
   }
 `
